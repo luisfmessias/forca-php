@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    $palavras=['COMPUTADOR','TECLADO','MONITOR'];
+    $palavras=['COMPUTADOR','TECLADO','MONITOR', 'INTERNET','MOUSE','PRINTER','FONE','WEBCAM'];
 
     if(!isset($_SESSION['palavra'])){
         $_SESSION['palavra']=$palavras[array_rand($palavras)];
@@ -26,7 +26,7 @@
     foreach(str_split($palavra) as $c){
     $exib .= in_array($c,$_SESSION['usadas']) ? $c.' ' : '_ ';
     }
-    
+
 ?>
 <!DOCTYPE html><html><body>
 <h1>Jogo da Forca (PHP)</h1>
